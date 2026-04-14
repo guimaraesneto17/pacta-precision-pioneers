@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { MapPin, BedDouble, Car, ArrowRight, Filter, X } from "lucide-react";
 import { useState, useMemo } from "react";
 import { SkeletonImage } from "@/components/SkeletonImage";
+import logoTrivan from "@/assets/logo-trivan.png";
 
 export const Route = createFileRoute("/imoveis/")({
   head: () => ({
@@ -211,6 +212,7 @@ function ImoveisPage() {
                             {imovel.status}
                           </span>
                         </div>
+                        <img src={logoTrivan} alt="" className="absolute bottom-12 right-3 w-10 h-10 sm:w-12 sm:h-12 object-contain opacity-40 pointer-events-none" />
                       </div>
 
                       <div className="p-4 sm:p-5">
