@@ -1,5 +1,5 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-import { PbqpBadge } from "@/components/PbqpBadge";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 import appCss from "../styles.css?url";
 
@@ -71,7 +71,7 @@ function RootComponent() {
   return (
     <>
       <Outlet />
-      <PbqpBadge />
+      <FloatingWhatsApp />
     </>
   );
 }
