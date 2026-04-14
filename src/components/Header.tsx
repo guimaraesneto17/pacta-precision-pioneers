@@ -11,6 +11,14 @@ const whatsappNumbers = [
 export function Header() {
   const [open, setOpen] = useState(false);
 
+  const navItems = [
+    { label: "Sobre", to: "/sobre" as const },
+    { label: "Imóveis", to: "/imoveis" as const },
+    { label: "Obras", to: "/projetos" as const },
+    { label: "Blog", to: "/blog" as const },
+    { label: "Contato", to: "/contato" as const },
+  ];
+
   // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (open) {
