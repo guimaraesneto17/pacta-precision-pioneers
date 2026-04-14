@@ -14,10 +14,10 @@ export function ProjectsGrid() {
           className="text-center mb-16"
         >
           <span className="text-xs tracking-[0.3em] uppercase text-accent font-medium">
-            Portfólio
+            Obras
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-4 font-heading">
-            Nossos Empreendimentos
+            Nossas Obras
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
             Conheça os projetos que marcam nossa trajetória de excelência
