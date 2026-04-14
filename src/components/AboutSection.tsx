@@ -21,10 +21,10 @@ export function AboutSection() {
               <span className="text-gradient-accent">que você merece</span>
             </h2>
             <p className="text-lg text-accent font-semibold italic mb-6">
-              Construtora e Incorporadora — Certificada PBQP-H
+              Engenharia e Construções — Certificada PBQP-H
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              A Trivan Construtora e Incorporadora nasceu com a missão de transformar projetos em 
+              A Trivan Engenharia e Construções nasceu com a missão de transformar projetos em 
               realidade com excelência técnica e compromisso inabalável. Atuamos na construção civil, 
               incorporação imobiliária e reformas residenciais e comerciais.
             </p>

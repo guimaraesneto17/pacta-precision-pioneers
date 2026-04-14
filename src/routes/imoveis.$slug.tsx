@@ -25,9 +25,9 @@ export const Route = createFileRoute("/imoveis/$slug")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: `${loaderData?.imovel.name ?? "Imóvel"} — Trivan Construtora e Incorporadora` },
+      { title: `${loaderData?.imovel.name ?? "Imóvel"} — Trivan Engenharia e Construções` },
       { name: "description", content: loaderData?.imovel.description ?? "" },
-      { property: "og:title", content: `${loaderData?.imovel.name ?? "Imóvel"} — Trivan Construtora e Incorporadora` },
+      { property: "og:title", content: `${loaderData?.imovel.name ?? "Imóvel"} — Trivan Engenharia e Construções` },
       { property: "og:description", content: loaderData?.imovel.description ?? "" },
       ...(loaderData?.imovel.image ? [{ property: "og:image", content: loaderData.imovel.image }] : []),
     ],

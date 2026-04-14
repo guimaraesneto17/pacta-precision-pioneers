@@ -9,7 +9,7 @@ const slides = [
   {
     image: hero1,
     title: "Qualidade e compromisso que você merece!",
-    subtitle: "Construtora e Incorporadora com certificação PBQP-H. Construção, incorporação e reformas.",
+    subtitle: "Engenharia e Construções com certificação PBQP-H. Construção civil e reformas.",
   },
   {
     image: hero2,
@@ -98,7 +98,7 @@ export function HeroCarousel() {
                 transition={{ duration: 1.2, delay: 0.4 }}
                 className="inline-block text-[10px] sm:text-xs uppercase text-accent font-medium mb-4 sm:mb-6"
               >
-                Trivan Construtora e Incorporadora
+                Trivan Engenharia e Construções
               </motion.span>
               <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-primary-foreground leading-tight mb-4 sm:mb-6 font-heading">
                 {slides[current].title}
