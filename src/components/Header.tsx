@@ -14,7 +14,6 @@ export function Header() {
   const waRef = useRef<HTMLDivElement>(null);
 
   const navItems = [
-    { label: "Home", to: "/" as const },
     { label: "Sobre", to: "/sobre" as const },
     { label: "Imóveis", to: "/imoveis" as const },
     { label: "Obras", to: "/projetos" as const },
@@ -52,7 +51,7 @@ export function Header() {
                 TRIVAN
               </span>
               <span className="text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] text-accent uppercase -mt-1 font-medium">
-                Construtora e Incorporadora
+                Engenharia e Construções
               </span>
             </div>
           </Link>
@@ -71,43 +70,6 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-4">
-            <div className="relative" ref={waRef}>
-              <button
-                onClick={() => setWaOpen(!waOpen)}
-                className="flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity"
-              >
-                <Phone size={16} />
-                Fale Conosco
-                <ChevronDown size={14} className={`transition-transform duration-200 ${waOpen ? "rotate-180" : ""}`} />
-              </button>
-              <AnimatePresence>
-                {waOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -8, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: -8, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute right-0 mt-2 w-56 bg-card rounded-xl shadow-xl border border-border overflow-hidden z-50"
-                  >
-                    {whatsappNumbers.map((wa) => (
-                      <a
-                        key={wa.city}
-                        href={`https://wa.me/${wa.number}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => setWaOpen(false)}
-                        className="flex items-center gap-3 px-4 py-3 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
-                      >
-                        <Phone size={14} />
-                        WhatsApp {wa.city}
-                      </a>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          </div>
 
           <button
             onClick={() => setOpen(!open)}
