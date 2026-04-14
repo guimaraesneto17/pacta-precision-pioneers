@@ -10,9 +10,9 @@ import { SkeletonImage } from "@/components/SkeletonImage";
 export const Route = createFileRoute("/imoveis/")({
   head: () => ({
     meta: [
-      { title: "Imóveis — Trivan Construtora e Incorporadora" },
-      { name: "description", content: "Conheça os imóveis residenciais e comerciais da Trivan Construtora e Incorporadora em Campina Grande e Sousa." },
-      { property: "og:title", content: "Imóveis — Trivan Construtora e Incorporadora" },
+      { title: "Imóveis — Trivan Engenharia e Construções" },
+      { name: "description", content: "Conheça os imóveis residenciais e comerciais da Trivan Engenharia e Construções em Campina Grande e Sousa." },
+      { property: "og:title", content: "Imóveis — Trivan Engenharia e Construções" },
       { property: "og:description", content: "Encontre o imóvel ideal para você." },
     ],
   }),
@@ -80,7 +80,7 @@ function ImoveisPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto">
               Conheça os empreendimentos construídos pela{" "}
-              <span className="font-semibold text-accent">Trivan Construtora e Incorporadora</span>:
+              <span className="font-semibold text-accent">Trivan Engenharia e Construções</span>:
             </p>
           </div>
         </section>

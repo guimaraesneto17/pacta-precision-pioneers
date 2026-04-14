@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <div className="mb-6">
               <span className="text-3xl font-bold tracking-wider font-heading">TRIVAN</span>
-              <p className="text-xs tracking-[0.3em] text-accent uppercase mt-1 font-medium">Construtora e Incorporadora</p>
+              <p className="text-xs tracking-[0.3em] text-accent uppercase mt-1 font-medium">Engenharia e Construções</p>
             </div>
             <p className="text-sm text-primary-foreground/80 font-medium italic mb-3">
               "Qualidade e compromisso que você merece!"
@@ -92,7 +92,7 @@ export function Footer() {
       <div className="border-t border-primary-foreground/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-primary-foreground/40">
-            © 2025 Trivan Construtora e Incorporadora. Todos os direitos reservados.
+            © 2025 Trivan Engenharia e Construções. Todos os direitos reservados.
           </p>
           <p className="text-xs text-primary-foreground/40">
             Certificada PBQP-H

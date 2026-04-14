@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { MapPin, ArrowRight, HardHat } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { SkeletonImage } from "@/components/SkeletonImage";
+import logoTrivan from "@/assets/logo-trivan.png";
 
 export const Route = createFileRoute("/projetos/")({
   head: () => ({
@@ -62,6 +63,7 @@ function ProjetosPage() {
                             height={600}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                          <img src={logoTrivan} alt="" className="absolute bottom-3 right-3 w-10 h-10 sm:w-12 sm:h-12 object-contain opacity-40 pointer-events-none" />
                           <div className="absolute top-4 left-4">
                             <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-primary-foreground ${project.statusColor}`}>
                               <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground animate-pulse" />

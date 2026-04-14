@@ -10,9 +10,9 @@ import { Shield, Award, Users, BadgeCheck } from "lucide-react";
 export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
-      { title: "Sobre — Trivan Construtora e Incorporadora" },
-      { name: "description", content: "Conheça a Trivan Construtora e Incorporadora: certificada PBQP-H, atuando em construção civil, incorporação e reformas residenciais e comerciais." },
-      { property: "og:title", content: "Sobre — Trivan Construtora e Incorporadora" },
+      { title: "Sobre — Trivan Engenharia e Construções" },
+      { name: "description", content: "Conheça a Trivan Engenharia e Construções: certificada PBQP-H, atuando em construção civil, incorporação e reformas residenciais e comerciais." },
+      { property: "og:title", content: "Sobre — Trivan Engenharia e Construções" },
       { property: "og:description", content: "Qualidade e compromisso que você merece. Certificada PBQP-H." },
     ],
   }),
@@ -33,7 +33,7 @@ function SobrePage() {
                 Qualidade e compromisso <span className="text-accent">que você merece</span>
               </h1>
               <p className="text-primary-foreground/70 mt-4 max-w-xl mx-auto text-sm sm:text-base">
-                Construtora e Incorporadora — Certificada PBQP-H
+                Engenharia e Construções — Certificada PBQP-H
               </p>
             </motion.div>
           </div>
@@ -45,7 +45,7 @@ function SobrePage() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
                 <p className="text-muted-foreground leading-relaxed mb-6 text-base sm:text-lg">
-                  A Trivan Construtora e Incorporadora nasceu com a missão de transformar projetos em
+                  A Trivan Engenharia e Construções nasceu com a missão de transformar projetos em
                   realidade com excelência técnica e compromisso inabalável. Atuamos na construção civil,
                   incorporação imobiliária e reformas residenciais e comerciais.
                 </p>

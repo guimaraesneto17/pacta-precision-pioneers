@@ -7,9 +7,9 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato — Trivan Construtora e Incorporadora" },
-      { name: "description", content: "Entre em contato com a Trivan Construtora e Incorporadora. Tire suas dúvidas e solicite um orçamento." },
-      { property: "og:title", content: "Contato — Trivan Construtora e Incorporadora" },
+      { title: "Contato — Trivan Engenharia e Construções" },
+      { name: "description", content: "Entre em contato com a Trivan Engenharia e Construções. Tire suas dúvidas e solicite um orçamento." },
+      { property: "og:title", content: "Contato — Trivan Engenharia e Construções" },
       { property: "og:description", content: "Fale com a Trivan para saber mais sobre nossos empreendimentos e serviços de reforma." },
     ],
   }),
@@ -64,7 +64,7 @@ function ContatoPage() {
                     {whatsappNumbers.map((wa) => (
                       <a
                         key={wa.city}
-                        href={`https://wa.me/${wa.number}?text=${encodeURIComponent("Olá! Gostaria de saber mais sobre os empreendimentos da Trivan Construtora e Incorporadora.")}`}
+                        href={`https://wa.me/${wa.number}?text=${encodeURIComponent("Olá! Gostaria de saber mais sobre os empreendimentos da Trivan Engenharia e Construções.")}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group flex flex-col items-center gap-4 p-6 sm:p-8 rounded-2xl border-2 border-border hover:border-accent bg-background hover:bg-accent/5 transition-all duration-300"
@@ -121,7 +121,7 @@ function ContatoPage() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Localização Trivan Construtora e Incorporadora"
+                    title="Localização Trivan Engenharia e Construções"
                   />
                 </div>
               </motion.div>
