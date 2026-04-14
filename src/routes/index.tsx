@@ -7,6 +7,7 @@ import { Differentials } from "@/components/Differentials";
 import { SocialProof } from "@/components/SocialProof";
 import { Footer } from "@/components/Footer";
 import { FeaturedProperties } from "@/components/FeaturedProperties";
+import { PartnerBadges } from "@/components/PartnerBadges";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,6 +32,7 @@ function HomePage() {
         <ProjectsGrid />
         <Differentials />
         <SocialProof />
+        <PartnerBadges />
       </main>
       <Footer />
     </div>
