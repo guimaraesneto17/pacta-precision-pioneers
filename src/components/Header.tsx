@@ -10,26 +10,6 @@ const whatsappNumbers = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const [waOpen, setWaOpen] = useState(false);
-  const waRef = useRef<HTMLDivElement>(null);
-
-  const navItems = [
-    { label: "Sobre", to: "/sobre" as const },
-    { label: "Imóveis", to: "/imoveis" as const },
-    { label: "Obras", to: "/projetos" as const },
-    { label: "Blog", to: "/blog" as const },
-    { label: "Contato", to: "/contato" as const },
-  ];
-
-  useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (waRef.current && !waRef.current.contains(e.target as Node)) {
-        setWaOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
-  }, []);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
