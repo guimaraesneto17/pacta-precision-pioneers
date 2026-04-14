@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoTrivan from "@/assets/logo-trivan.png";
 
 const whatsappNumbers = [
   { city: "Campina Grande", number: "5583991083039" },
@@ -33,18 +34,15 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-border/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-bold tracking-wider text-primary-foreground font-heading">
-                TRIVAN
-              </span>
-              <span className="text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] text-accent uppercase -mt-1 font-medium">
-                Engenharia e Construções
-              </span>
-            </div>
+          <Link to="/" className="shrink-0">
+            <img
+              src={logoTrivan}
+              alt="Trivan Engenharia e Construções"
+              className="h-10 sm:h-14 w-auto object-contain"
+            />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+          <nav className="hidden lg:flex items-center justify-center flex-1 gap-6 xl:gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.label}
@@ -58,6 +56,8 @@ export function Header() {
             ))}
           </nav>
 
+          {/* Spacer to balance the logo on desktop */}
+          <div className="hidden lg:block w-[56px] shrink-0" />
 
           <button
             onClick={() => setOpen(!open)}
