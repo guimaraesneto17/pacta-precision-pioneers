@@ -7,6 +7,8 @@ import { MapPin, ArrowLeft, ChevronLeft, ChevronRight, HardHat, Clock } from "lu
 import { useState } from "react";
 import { SkeletonImage } from "@/components/SkeletonImage";
 import logoTrivan from "@/assets/logo-trivan-transparent.png";
+import logoCaixa from "@/assets/logo-caixa.png";
+import logoMcmv from "@/assets/logo-mcmv.png";
 
 export const Route = createFileRoute("/projetos/$slug")({
   loader: ({ params }) => {
@@ -82,6 +84,10 @@ function ProjetoPage() {
     ? Math.round(project.constructionPhases.reduce((sum, p) => sum + p.progress, 0) / project.constructionPhases.length)
     : project.status === "Entregue" ? 100 : 0;
 
+  // Show partner logos on some projects (prototype — configurable later)
+  const showCaixa = ["residencial-seletto", "villagio-trivan", "residencial-parque-trivan"].includes(project.slug);
+  const showMcmv = ["residencial-parque-trivan", "trivan-sunset-towers"].includes(project.slug);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -145,6 +151,14 @@ function ProjetoPage() {
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">{project.description}</p>
                 <p className="text-muted-foreground leading-relaxed mb-8">{project.details}</p>
+
+                {/* Partner badges */}
+                {(showCaixa || showMcmv) && (
+                  <div className="flex items-center gap-6 mb-8 pt-4 border-t border-border">
+                    {showCaixa && <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-8 sm:h-10 object-contain grayscale hover:grayscale-0 transition-all" />}
+                    {showMcmv && <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 transition-all" />}
+                  </div>
+                )}
 
                 {/* Construction Progress Section */}
                 {project.constructionPhases && project.constructionPhases.length > 0 && (

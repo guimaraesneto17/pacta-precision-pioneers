@@ -3,10 +3,10 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { projects } from "@/lib/projects-data";
 import { motion } from "framer-motion";
-import { MapPin, ArrowRight, HardHat } from "lucide-react";
+import { MapPin, ArrowRight, HardHat, ArrowLeft } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { SkeletonImage } from "@/components/SkeletonImage";
-import logoTrivan from "@/assets/logo-trivan.png";
+import logoTrivan from "@/assets/logo-trivan-transparent.png";
 
 export const Route = createFileRoute("/projetos/")({
   head: () => ({
@@ -25,7 +25,8 @@ function ProjetosPage() {
     <div className="min-h-screen">
       <Header />
       <main>
-        <section className="pt-32 pb-16 bg-primary text-primary-foreground">
+        {/* Hero */}
+        <section className="pt-28 sm:pt-32 pb-12 sm:pb-16 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <span className="text-xs tracking-[0.3em] uppercase text-accent font-medium">Transparência</span>
@@ -35,8 +36,16 @@ function ProjetosPage() {
           </div>
         </section>
 
-        <section className="py-24 bg-secondary">
+        {/* Back link + Grid */}
+        <section className="py-12 sm:py-24 bg-secondary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors mb-8"
+            >
+              <ArrowLeft size={16} /> Voltar ao início
+            </Link>
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, i) => {
                 const overallProgress = project.constructionPhases

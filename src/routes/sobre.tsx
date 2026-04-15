@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Differentials } from "@/components/Differentials";
 import { SocialProof } from "@/components/SocialProof";
+import { PartnerBadges } from "@/components/PartnerBadges";
 import { CounterStat } from "@/components/CounterStat";
 import { motion } from "framer-motion";
 import { Shield, Award, Users, BadgeCheck } from "lucide-react";
@@ -119,6 +120,7 @@ function SobrePage() {
 
         <Differentials />
         <SocialProof />
+        <PartnerBadges />
       </main>
       <Footer />
     </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, X } from "lucide-react";
+import { X } from "lucide-react";
 
 const whatsappNumbers = [
   { city: "Campina Grande", number: "5583991083039" },
@@ -60,7 +60,7 @@ export function FloatingWhatsApp() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1, duration: 0.4, type: "spring" }}
         onClick={() => setOpen(!open)}
-        className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl flex items-center justify-center transition-all duration-300"
+        className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl flex items-center justify-center transition-all duration-300 animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite] hover:animate-none"
         aria-label="WhatsApp"
       >
         {open ? (
