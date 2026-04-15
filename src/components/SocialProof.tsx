@@ -105,25 +105,19 @@ export function SocialProof() {
                 href={`https://www.instagram.com/p/${postId}/`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full h-full"
+                className="block w-full h-full bg-muted"
               >
                 <img
-                  src={`https://instagram.com/p/${postId}/media/?size=m`}
+                  src={`https://www.instagram.com/p/${postId}/media/?size=m`}
                   alt={`Post Instagram @trivanengenharia`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                   width={400}
                   height={400}
+                  crossOrigin="anonymous"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.style.display = 'none';
-                    const parent = target.parentElement;
-                    if (parent) {
-                      parent.classList.add('bg-muted', 'flex', 'items-center', 'justify-center');
-                      const icon = document.createElement('div');
-                      icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>';
-                      parent.appendChild(icon);
-                    }
                   }}
                 />
                 <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
