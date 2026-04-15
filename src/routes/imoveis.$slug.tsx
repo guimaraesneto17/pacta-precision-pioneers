@@ -17,6 +17,8 @@ import {
 } from "lucide-react";
 import { useState, useRef } from "react";
 import logoTrivan from "@/assets/logo-trivan-transparent.png";
+import logoCaixa from "@/assets/logo-caixa.png";
+import logoMcmv from "@/assets/logo-mcmv.png";
 
 export const Route = createFileRoute("/imoveis/$slug")({
   loader: ({ params }) => {
@@ -64,6 +66,10 @@ function ImovelPage() {
   const nextImg = () => setCurrentImg((c) => (c + 1) % imovel.gallery.length);
   const prevImg = () => setCurrentImg((c) => (c - 1 + imovel.gallery.length) % imovel.gallery.length);
 
+  // Show partner logos on some properties (prototype — configurable later)
+  const showCaixa = ["residencial-seletto", "villagio-trivan", "residencial-parque-trivan"].includes(imovel.slug);
+  const showMcmv = ["residencial-parque-trivan", "residencial-alto-branco"].includes(imovel.slug);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -100,6 +106,14 @@ function ImovelPage() {
                   {imovel.tagline}
                 </p>
               </motion.div>
+
+              {/* Partner logos on hero */}
+              {(showCaixa || showMcmv) && (
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="flex items-center gap-6 mt-6">
+                  {showCaixa && <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-8 sm:h-10 object-contain brightness-0 invert opacity-70" />}
+                  {showMcmv && <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-10 sm:h-12 object-contain brightness-0 invert opacity-70" />}
+                </motion.div>
+              )}
 
               <motion.div
                 initial={{ opacity: 0 }}
@@ -194,6 +208,14 @@ function ImovelPage() {
                   <MapPin size={16} className="text-accent" />
                   {imovel.location}
                 </div>
+
+                {/* Partner badges inline */}
+                {(showCaixa || showMcmv) && (
+                  <div className="flex items-center gap-6 mt-6 pt-6 border-t border-border">
+                    {showCaixa && <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-8 sm:h-10 object-contain grayscale hover:grayscale-0 transition-all" />}
+                    {showMcmv && <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 transition-all" />}
+                  </div>
+                )}
               </motion.div>
 
               <motion.div
@@ -219,7 +241,6 @@ function ImovelPage() {
         <section className="py-20 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
-              {/* Apartment features */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -239,7 +260,6 @@ function ImovelPage() {
                 </ul>
               </motion.div>
 
-              {/* Building amenities */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
