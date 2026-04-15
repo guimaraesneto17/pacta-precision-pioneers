@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { MapPin, BedDouble, Car, ArrowRight, Filter, X } from "lucide-react";
 import { useState, useMemo } from "react";
 import { SkeletonImage } from "@/components/SkeletonImage";
-import logoTrivan from "@/assets/logo-trivan.png";
+import logoTrivan from "@/assets/logo-trivan-transparent.png";
 
 export const Route = createFileRoute("/imoveis/")({
   head: () => ({
