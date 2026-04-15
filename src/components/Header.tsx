@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoTrivan from "@/assets/logo-trivan.png";
+import logoTrivan from "@/assets/logo-trivan-transparent.png";
 
 const whatsappNumbers = [
   { city: "Campina Grande", number: "5583991083039" },

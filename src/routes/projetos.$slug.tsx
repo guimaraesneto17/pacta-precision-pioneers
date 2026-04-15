@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { MapPin, ArrowLeft, ChevronLeft, ChevronRight, HardHat, Clock } from "lucide-react";
 import { useState } from "react";
 import { SkeletonImage } from "@/components/SkeletonImage";
+import logoTrivan from "@/assets/logo-trivan-transparent.png";
 
 export const Route = createFileRoute("/projetos/$slug")({
   loader: ({ params }) => {
@@ -101,6 +102,7 @@ function ProjetoPage() {
               height={840}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+            <img src={logoTrivan} alt="" className="absolute bottom-6 right-6 w-14 h-14 object-contain opacity-40 pointer-events-none z-[1]" />
             {project.gallery.length > 1 && (
               <>
                 <button onClick={prevImg} className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-primary-foreground/20 flex items-center justify-center text-primary-foreground/60 hover:border-accent hover:text-accent transition-all bg-primary/30 backdrop-blur-sm" aria-label="Foto anterior">

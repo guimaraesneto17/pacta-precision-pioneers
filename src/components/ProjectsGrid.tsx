@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MapPin, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { projects } from "@/lib/projects-data";
-import logoTrivan from "@/assets/logo-trivan.png";
+import logoTrivan from "@/assets/logo-trivan-transparent.png";
 
 export function ProjectsGrid() {
   return (

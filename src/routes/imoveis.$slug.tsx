@@ -16,6 +16,7 @@ import {
   Phone,
 } from "lucide-react";
 import { useState, useRef } from "react";
+import logoTrivan from "@/assets/logo-trivan-transparent.png";
 
 export const Route = createFileRoute("/imoveis/$slug")({
   loader: ({ params }) => {
@@ -72,12 +73,13 @@ function ImovelPage() {
           <div className="relative aspect-[16/7] max-h-[700px] overflow-hidden">
             <motion.div style={{ y: heroImageY, scale: heroScale }} className="absolute inset-0 will-change-transform">
               <img
-                src={imovel.gallery[currentImg]}
-                alt={`${imovel.name} - Foto ${currentImg + 1}`}
-                className="w-full h-[120%] object-cover transition-all duration-700"
-                width={1920}
-                height={840}
-              />
+                 src={imovel.gallery[currentImg]}
+                 alt={`${imovel.name} - Foto ${currentImg + 1}`}
+                 className="w-full h-[120%] object-cover transition-all duration-700"
+                 width={1920}
+                 height={840}
+               />
+               <img src={logoTrivan} alt="" className="absolute bottom-6 right-6 w-14 h-14 object-contain opacity-40 pointer-events-none z-[1]" />
             </motion.div>
             <div className="absolute inset-0 hero-overlay" />
 
